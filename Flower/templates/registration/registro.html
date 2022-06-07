@@ -23,9 +23,39 @@
                             <hr>
                             <form action="" method="post">
                                 {% csrf_token %}
-                                {{ form }}
+                                <div class="txt_field">
+                                    {{ form.username }}
+                                    <span></span>
+                                    <label for="correo">Ingresa un usuario</label>
+                                </div>
+                                <div class="txt_field">
+                                    {{ form.first_name }}
+                                    <span></span>
+                                    <label for="correo">Ingresa tu nombre</label>
+                                </div>
+                                <div class="txt_field" id="login_correo">
+                                    {{ form.last_name }}
+                                    <span></span>
+                                    <label for="correo">Ingresa tus apellido</label>
+                                </div>
+                                <div class="txt_field" id="login_correo">
+                                    {{ form.email }}
+                                    <span></span>
+                                    <label for="correo">Ingresa tu email</label>
+                                </div>
+                                <div class="txt_field" id="login_correo">
+                                    {{ form.password1 }}
+                                    <span></span>
+                                    <label for="correo">Ingresa una contraseña</label>
+                                </div>
+                                <div class="txt_field" id="login_correo">
+                                    {{ form.password2 }}
+                                    <span></span>
+                                    <label for="correo">Confirma la contraseña</label>
+                                </div>
 
-                                <button id="btn-registrar" class="button_large">Registrar</button>
+                                <input type="Submit" value="Registrate ahora">
+                                <br>
                                 <a href="{% url 'login' %}">¿Deseas iniciar sesión? Pincha acá</a>
                             </form>
                         </div>

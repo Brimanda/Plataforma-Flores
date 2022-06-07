@@ -19,11 +19,21 @@
     <h1>Inicio de Sesión</h1>
     <form id="login" method="post">
       {% csrf_token %}
-      
-        {{ form }}
-
-        <button id="btn-registrar" class="button_large">Entrar</button>
+      <div class="txt_field" id="login_correo">
+        {{ form.username }}
+        <span></span>
+        <label for="correo">Usuario</label>
+      </div>
+      <div class="txt_field">
+        {{ form.password }}
+        <span></span>
+        <label for="contrasena">Contraseña</label>
+      </div>
+      <!-- <button id="btn-registrar" class="button_large">Entrar</button> -->
+      <input type="submit" value="Inicia sesión">
+      <div class="pag_registro">
         <a href="{% url 'registro' %}">¿Deseas registrarte? Pincha aquí</a>
+      </div>
     </form>
   </div>
 
